@@ -155,8 +155,9 @@ body {
 .cta-buttons {
   margin-top: 2rem;
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -165,6 +166,28 @@ body {
   text-decoration: none;
   font-weight: 500;
   transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn i {
+  font-size: 1.1rem;
+}
+
+.resume-btn {
+  background: var(--gradient);
+  border: none;
+  margin-top: 0.5rem;
+  color: white;
+}
+
+.resume-btn:hover {
+  opacity: 0.95;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
 }
 
 .btn.primary {
@@ -182,13 +205,16 @@ body {
   transform: translateY(-2px);
 }
 
-.social-links {
+.hero .social-links {
   margin-top: 3rem;
   display: flex;
   gap: 1.5rem;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
 }
 
-.social-links a {
+.hero .social-links a {
   width: 42px;
   height: 42px;
   background: rgba(217, 217, 217, 0.1);
@@ -196,25 +222,25 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  margin-right: 6px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   transition: var(--transition);
+  color: white;
+  font-size: 1.2rem;
+  backdrop-filter: blur(4px);
 }
 
-.social-links a img {
-  width: 50%;
-  filter: brightness(0) invert(1);
+.hero .social-links a i {
   transition: var(--transition);
 }
 
-.social-links a:hover {
-  background: black;
-  color: #111827;
+.hero .social-links a:hover {
+  background: white;
   transform: translateY(-2px);
+  border-color: transparent;
 }
 
-.social-links a:hover img {
-  filter: brightness(0);
+.hero .social-links a:hover i {
+  color: var(--primary-color);
 }
 
 /* About Section */
@@ -476,13 +502,13 @@ body {
 }
 
 .contact .social-links a:hover {
-  /* background: white; */
-  color: #111827;
+  background: white;
   transform: translateY(-5px);
+  border-color: transparent;
 }
 
 .contact .social-links a:hover img {
-  filter: none;
+  filter: brightness(0);
 } /* Footer */
 .footer {
   padding: 2rem 5%;
