@@ -61,24 +61,11 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// Form Submission Handler
-const contactForm = document.getElementById("contact-form");
-
-contactForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const formData = {
-    name: contactForm.name.value,
-    email: contactForm.email.value,
-    message: contactForm.message.value,
-  };
-
-  // Here you would typically send the form data to a server
-  console.log("Form submitted:", formData);
-
-  // Clear form
-  contactForm.reset();
-
-  // Show success message
-  alert("Thank you for your message! I will get back to you soon.");
-});
+// Resume Download Function
+const downloadCV = () => {
+  const fileId = "1QNKcE3IFtMbjqRCV75UNqt_eO3OHC0xM";
+  const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+  const viewUrl =
+    "https://drive.google.com/file/d/1QNKcE3IFtMbjqRCV75UNqt_eO3OHC0xM/view?usp=sharing";
+  window.open(downloadUrl, "_blank");
+};
